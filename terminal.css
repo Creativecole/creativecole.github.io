@@ -179,12 +179,10 @@ footer button:hover, footer button:focus-visible {
 blockquote {
   margin: 0 0 31px;
   font-size: clamp(16px, 1.35vw, 19px);
-  font-style: italic;
-  font-weight: 500;
+  font-style: normal;
+  font-weight: 400;
   line-height: 1.42;
-  letter-spacing: .005em;
-  font-variant-ligatures: none;
-  font-feature-settings: "liga" 0, "calt" 0;
+  letter-spacing: -.025em;
 }
 
 .hint {
@@ -286,6 +284,7 @@ noscript { display: block; padding: 15px 30px; text-align: center; }
 }
 
 @media (min-width: 760px) {
+  .paper { width: clamp(720px, 70vw, 980px); }
   .hero, .terminal { margin-left: clamp(22px, 3.2vw, 34px); }
 }
 
