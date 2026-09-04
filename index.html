@@ -1,200 +1,75 @@
-<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cole World</title><meta name="author" content="Creativecole"><meta name="copyright" content="Creativecole"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta property="og:type" content="website">
-<meta property="og:title" content="Cole World">
-<meta property="og:url" content="https://creativecole.github.io/index.html">
-<meta property="og:site_name" content="Cole World">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/avatar.png">
-<meta property="article:author" content="Creativecole">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/avatar.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://creativecole.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: 'Just',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
-    },
-    fancybox: {
-      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isanchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Cole World',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2021-08-06 22:29:55'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f4f0">
+    <meta name="description" content="Creativecole 的终端风格个人主页。">
+    <meta property="og:title" content="Creativecole — cc:/$">
+    <meta property="og:description" content="A tiny personal corner of the web, built like a shell.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://creativecole.github.io/">
+    <meta property="og:image" content="https://creativecole.github.io/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Creativecole — cc:/$">
+    <meta name="twitter:description" content="A tiny personal corner of the web, built like a shell.">
+    <meta name="twitter:image" content="https://creativecole.github.io/og.png">
+    <title>Creativecole — cc:/$</title>
+    <link rel="icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="/terminal.css">
+  </head>
+  <body>
+    <main class="paper" aria-labelledby="page-title">
+      <header class="masthead">
+        <a class="site-id" href="https://github.com/Creativecole" target="_blank" rel="noreferrer">
+          <span aria-hidden="true">#</span> creativecole.github.io
+        </a>
+      </header>
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
+      <section class="hero" aria-label="Personal introduction">
+        <p class="eyebrow">HELLO, WORLD. I'M</p>
+        <h1 id="page-title" data-text="Creativecole">Creativecole</h1>
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+        <p class="identity">
+          <span>Developer</span><i aria-hidden="true">·</i>
+          <a href="https://github.com/Creativecole" target="_blank" rel="noreferrer">GitHub @Creativecole</a>
+        </p>
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
+        <nav class="quick-links" aria-label="Quick links">
+          <button type="button" data-command="bio"><span aria-hidden="true">👤</span> Bio</button>
+          <a href="https://github.com/Creativecole" target="_blank" rel="noreferrer"><span aria-hidden="true">⌘</span> GitHub</a>
+          <button type="button" data-command="posts"><span aria-hidden="true">▤</span> Posts</button>
+          <button type="button" data-command="help"><span aria-hidden="true">?</span> Help</button>
+        </nav>
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 5.4.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/default.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Cole World</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Cole World</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/08/06/%E6%88%91%E5%BF%98%E4%B8%8D%E6%8E%89%E5%98%89%E7%84%B6(%E5%A4%A7%E6%A6%82)%E4%BA%86/" title="我忘不掉嘉然(大概)了">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/jiaran/jiaran.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我忘不掉嘉然(大概)了"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/08/06/%E6%88%91%E5%BF%98%E4%B8%8D%E6%8E%89%E5%98%89%E7%84%B6(%E5%A4%A7%E6%A6%82)%E4%BA%86/" title="我忘不掉嘉然(大概)了">我忘不掉嘉然(大概)了</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-08-06T14:01:07.244Z" title="Created 2021-08-06 22:01:07">2021-08-06</time></span></div><div class="content">因为嘉然小姐总会发出惹啊的声音，为此我总差点就离开这个美丽的世界 。 嘉然小姐总说自己是猫，不是个憨憨，可是却喜欢追着自己的尾巴转，摸起来也很柔软。贝拉总是鼓励着我，她的眼睛像星星一样闪闪发光治愈着我。
-如果早晨不是有乃o叫我起床的话，说不定我永远都不愿意睁眼了。嘉然小姐刚睡醒迷迷糊糊睁开眼，会用被子遮住自已，但露在外面的两只耳朵因害羞一抖一抖的样子好可爱 。向晚小姐总是呆呆的，犯错时脸会变的红扑扑的的，羞涩的表情也好卡哇伊，虽然总是说着奇怪的话 ，但依旧是个可靠的家伙。
-珈乐在厨房准备料理时笨手笨脚的样子好可爱，明明可以大家一起帮忙，却总是自己一个人逞强，简直就是一个笨蛋、笨蛋、大笨蛋。嘉然不喜欢吃辣椒（辛辣苦手！），被发现时会故意撒娇吐舌头 ，嘉然小姐很可爱，很喜欢躲在阁楼上睡懒觉，好几次都被我撞到了，小小的一只，而乃琳小姐则喜欢在草地上坐着，感受风的温度。
-珈乐喜欢在山后的亭子里泡茶，喝一杯贝拉沏地山茶，看着嘉然和向晚在相互扑倒对方，尾巴在身后晃来晃去
-如果，乃琳小姐能再为我做个头部按摩那就更好了，手法十分温柔，排拿也让人感觉不到生琉，如果能一直这样就好了 。
-乃琳小姐与贝拉小姐 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/08/06/mermaid_test/" title="Mermaid Test">     <img class="post_bg" src="https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/mermaid_test/mermaid.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mermaid Test"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/08/06/mermaid_test/" title="Mermaid Test">Mermaid Test</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-08-05T16:35:45.000Z" title="Created 2021-08-06 00:35:45">2021-08-06</time></span></div><div class="content">sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts prevail!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Creativecole</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/08/06/%E6%88%91%E5%BF%98%E4%B8%8D%E6%8E%89%E5%98%89%E7%84%B6(%E5%A4%A7%E6%A6%82)%E4%BA%86/" title="我忘不掉嘉然(大概)了"><img src="https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/jiaran/jiaran.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我忘不掉嘉然(大概)了"/></a><div class="content"><a class="title" href="/2021/08/06/%E6%88%91%E5%BF%98%E4%B8%8D%E6%8E%89%E5%98%89%E7%84%B6(%E5%A4%A7%E6%A6%82)%E4%BA%86/" title="我忘不掉嘉然(大概)了">我忘不掉嘉然(大概)了</a><time datetime="2021-08-06T14:01:07.244Z" title="Created 2021-08-06 22:01:07">2021-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/06/mermaid_test/" title="Mermaid Test"><img src="https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/mermaid_test/mermaid.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Mermaid Test"/></a><div class="content"><a class="title" href="/2021/08/06/mermaid_test/" title="Mermaid Test">Mermaid Test</a><time datetime="2021-08-05T16:35:45.000Z" title="Created 2021-08-06 00:35:45">2021-08-06</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/test/" style="font-size: 1.1em; color: #999">test</a> <a href="/tags/%E5%98%89%E7%84%B6/" style="font-size: 1.1em; color: #999">嘉然</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">August 2021</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-08-06T14:29:55.327Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/Creativecole/creativecole.github.io@source/source/img/default.png')"><div id="footer-wrap"><div class="copyright">&copy;2021 By Creativecole</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><script type="text/javascript" id="maid-script" src="https://unpkg.com/mermaid@undefined/dist/mermaid.min.js?v=undefined"></script><script>if (window.mermaid) {
-  var options = JSON.parse(document.getElementById('maid-script').getAttribute('mermaidoptioins'));
-  mermaid.initialize(options);
-}</script></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>function subtitleType () {
-  if (true) { 
-    var typed = new Typed("#subtitle", {
-      strings: "The world is trivial， not even trivial., We live in a twilight world，, and there are no friends at dusk., A kind man knows a blind man holds grudges，, a wise man knows a wise man knows nothing.,".split(","),
-      startDelay: 300,
-      typeSpeed: 150,
-      loop: true,
-      backSpeed: 50
-    })
-  } else {
-    document.getElementById("subtitle").innerHTML = 'T'
-  }
-}
+        <blockquote>I build things for the web and share them on GitHub.</blockquote>
 
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}</script><script>if (document.getElementsByClassName('mermaid').length) {
-  if (window.mermaidJsLoad) mermaid.init()
-  else {
-    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
-      window.mermaidJsLoad = true
-      mermaid.initialize({
-        theme: 'dark',
-      })
-      false && mermaid.init()
-    })
-  }
-}</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-POWERMODE.mobile = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+        <div class="hint">
+          <span aria-hidden="true">•</span>
+          <p>This page doubles as a shell.<br>Try: <button type="button" data-command="ls">ls</button>, <button type="button" data-command="bio">bio</button>, <button type="button" data-command="tree">tree</button> or <button type="button" data-command="help">help</button>.</p>
+        </div>
+
+        <p class="updated">Last update: <time id="last-updated" datetime="2026-09-04">Fri Sep 04 2026</time></p>
+      </section>
+
+      <section class="terminal" aria-label="Interactive terminal">
+        <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+        <form id="terminal-form" autocomplete="off">
+          <label class="prompt" for="terminal-input"><span>cc:/</span><b>$</b></label>
+          <input id="terminal-input" name="command" type="text" inputmode="text" spellcheck="false" aria-label="Enter a command" placeholder=" ">
+          <span class="cursor" aria-hidden="true"></span>
+        </form>
+      </section>
+
+      <footer>
+        <span>© <span id="year">2026</span> Creativecole</span>
+        <span>type <button type="button" data-command="help">help</button> to begin</span>
+      </footer>
+    </main>
+
+    <noscript>This interactive shell needs JavaScript, but you can still visit <a href="https://github.com/Creativecole">my GitHub profile</a>.</noscript>
+    <script src="/terminal.js"></script>
+  </body>
+</html>
