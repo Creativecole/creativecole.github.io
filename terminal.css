@@ -28,6 +28,7 @@
   --ink: #292d32;
   --muted: #71757a;
   --accent: #596bdc;
+  --directory: #405ee9;
   --shadow: rgba(22, 29, 37, 0.12);
   font-family: "Victor Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 }
@@ -222,8 +223,12 @@ blockquote {
 .terminal-line.error { color: #a34545; }
 .terminal-line.suggestions { color: var(--muted); }
 .terminal-line a { color: var(--accent); text-underline-offset: .16em; }
-.terminal-line .accent,
-.terminal-line .directory { color: var(--accent); font-weight: 700; }
+.terminal-line .accent { color: var(--accent); font-weight: 700; }
+.terminal-line .directory {
+  color: var(--directory);
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
 
 #terminal-form {
   position: relative;
