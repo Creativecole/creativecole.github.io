@@ -1,18 +1,42 @@
+@font-face {
+  font-family: "Victor Mono";
+  src: url("/fonts/victor-mono-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Victor Mono";
+  src: url("/fonts/victor-mono-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Victor Mono";
+  src: url("/fonts/victor-mono-italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
-  --paper: #f4f4f0;
-  --ink: #24282d;
-  --muted: #696c70;
-  --accent: #5967d9;
+  --paper: #f7f7f4;
+  --ink: #292d32;
+  --muted: #71757a;
+  --accent: #596bdc;
   --shadow: rgba(22, 29, 37, 0.12);
-  font-family: "SFMono-Regular", "Cascadia Mono", "Liberation Mono", Menlo, Consolas, monospace;
+  font-family: "Victor Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
 * { box-sizing: border-box; }
 
 html {
   min-height: 100%;
-  background: #e9ebeb;
+  background: #eff0f1;
 }
 
 body {
@@ -20,7 +44,7 @@ body {
   margin: 0;
   padding: clamp(0px, 2vw, 28px);
   color: var(--ink);
-  background: radial-gradient(circle at 16% 12%, rgba(255,255,255,.86), transparent 31rem), #e9ebeb;
+  background: radial-gradient(circle at 16% 12%, #fff, transparent 31rem), #eff0f1;
 }
 
 button, input { font: inherit; }
@@ -100,13 +124,11 @@ h1 {
   position: relative;
   width: fit-content;
   margin: 0;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: clamp(68px, 10vw, 142px);
-  font-weight: 900;
-  line-height: .83;
-  letter-spacing: -.055em;
-  transform: scaleX(.88);
-  transform-origin: left;
+  font-family: "Victor Mono", "SFMono-Regular", Menlo, monospace;
+  font-size: clamp(58px, 8vw, 116px);
+  font-weight: 700;
+  line-height: .92;
+  letter-spacing: -.09em;
 }
 
 h1::after {
@@ -167,7 +189,7 @@ blockquote {
   margin: 0 0 31px;
   font-size: clamp(18px, 2.1vw, 29px);
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.42;
 }
 
@@ -205,8 +227,10 @@ blockquote {
 
 .terminal-line.command { margin-top: 10px; }
 .terminal-line.error { color: #a34545; }
+.terminal-line.suggestions { color: var(--muted); }
 .terminal-line a { color: var(--accent); text-underline-offset: .16em; }
-.terminal-line .accent { color: var(--accent); font-weight: 800; }
+.terminal-line .accent,
+.terminal-line .directory { color: var(--accent); font-weight: 700; }
 
 #terminal-form {
   position: relative;
@@ -234,7 +258,7 @@ blockquote {
 .cursor {
   position: absolute;
   top: .16em;
-  left: 5.6ch;
+  left: calc((var(--prompt-ch, 5) * 1ch) + .6ch);
   display: inline-block;
   width: .7em;
   height: 1.05em;
@@ -282,26 +306,4 @@ noscript { display: block; padding: 15px 30px; text-align: center; }
 
 @media (prefers-reduced-motion: reduce) {
   .cursor { animation: none; }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-    --paper: #171a1d;
-    --ink: #e6e8e4;
-    --muted: #9b9da0;
-    --accent: #8490ff;
-    --shadow: rgba(0,0,0,.35);
-  }
-
-  html, body { background: #0f1113; }
-
-  .paper {
-    border-color: #343a3f;
-    background-image:
-      repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0, rgba(255,255,255,.025) 1px, transparent 1px, transparent 4px),
-      linear-gradient(90deg, rgba(255,255,255,.015), transparent 35%, rgba(255,255,255,.01));
-  }
-
-  .paper::after { mix-blend-mode: screen; opacity: .08; }
 }
