@@ -83,8 +83,7 @@ a, button { color: inherit; }
 
 .masthead {
   margin: 0 clamp(28px, 4vw, 58px);
-  padding: 30px 0 17px;
-  border-bottom: 3px solid var(--ink);
+  padding: 27px 0 0;
 }
 
 .site-id {
@@ -98,18 +97,9 @@ a, button { color: inherit; }
 
 .site-id span { margin-right: .55ch; }
 
-.site-id::after {
-  content: "";
-  display: block;
-  width: 100%;
-  margin-top: 12px;
-  border-bottom: 2px solid var(--muted);
-  transform: rotate(-.35deg);
-}
-
 .hero {
   width: min(1080px, calc(100% - clamp(56px, 8vw, 116px)));
-  padding: clamp(46px, 7vw, 92px) 0 28px;
+  padding: clamp(26px, 3.8vw, 52px) 0 24px;
 }
 
 .eyebrow {
@@ -125,10 +115,10 @@ h1 {
   width: fit-content;
   margin: 0;
   font-family: "Victor Mono", "SFMono-Regular", Menlo, monospace;
-  font-size: clamp(58px, 8vw, 116px);
+  font-size: clamp(50px, 6.3vw, 88px);
   font-weight: 700;
-  line-height: .92;
-  letter-spacing: -.09em;
+  line-height: .96;
+  letter-spacing: -.065em;
 }
 
 h1::after {
@@ -145,7 +135,7 @@ h1::after {
   flex-wrap: wrap;
   align-items: center;
   gap: .35em .72em;
-  margin: 42px 0 28px;
+  margin: 31px 0 26px;
   font-size: clamp(17px, 2vw, 27px);
   font-weight: 700;
 }
@@ -189,8 +179,11 @@ blockquote {
   margin: 0 0 31px;
   font-size: clamp(18px, 2.1vw, 29px);
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.42;
+  letter-spacing: .005em;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
 }
 
 .hint {
@@ -296,8 +289,8 @@ noscript { display: block; padding: 15px 30px; text-align: center; }
   .paper { min-height: 100vh; border-width: 0; border-radius: 0; }
   .masthead { margin-inline: 22px; padding-top: 23px; }
   .hero, .terminal { width: auto; margin-inline: 22px; }
-  .hero { padding-top: 47px; }
-  h1 { font-size: clamp(57px, 18vw, 96px); }
+  .hero { padding-top: 29px; }
+  h1 { font-size: clamp(42px, 12.5vw, 65px); }
   .identity { margin-top: 31px; }
   .quick-links { gap: 11px 22px; }
   .hint { margin-left: 7px; }
