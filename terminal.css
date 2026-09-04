@@ -36,13 +36,18 @@
 * { box-sizing: border-box; }
 
 html {
+  height: 100%;
   min-height: 100%;
+  overflow: hidden;
   background: #eff0f1;
 }
 
 body {
+  height: 100vh;
+  height: 100dvh;
   min-height: 100vh;
   margin: 0;
+  overflow: hidden;
   padding: clamp(0px, 2vw, 28px);
   color: var(--ink);
   background: radial-gradient(circle at 16% 12%, #fff, transparent 31rem), #eff0f1;
@@ -57,9 +62,15 @@ a, button { color: inherit; }
   display: flex;
   flex-direction: column;
   width: min(100%, 980px);
-  min-height: calc(100vh - clamp(0px, 4vw, 56px));
+  height: calc(100vh - clamp(0px, 4vw, 56px));
+  height: calc(100dvh - clamp(0px, 4vw, 56px));
+  min-height: 0;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-color: rgba(89, 107, 220, .38) transparent;
+  scrollbar-width: thin;
   border: 1px solid #c5cbd0;
   border-radius: 17px;
   background-color: var(--paper);
@@ -79,6 +90,15 @@ a, button { color: inherit; }
   mix-blend-mode: multiply;
 }
 
+.paper::-webkit-scrollbar { width: 8px; }
+.paper::-webkit-scrollbar-track { background: transparent; }
+.paper::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 99px;
+  background: rgba(89, 107, 220, .38);
+  background-clip: padding-box;
+}
+
 .masthead, .hero, .terminal, footer, noscript {
   position: relative;
   z-index: 1;
@@ -86,13 +106,13 @@ a, button { color: inherit; }
 
 .masthead {
   margin: 0 clamp(22px, 3.2vw, 34px);
-  padding: 27px 0 0;
+  padding: 23px 0 0;
 }
 
 .site-id {
   display: inline-block;
   color: var(--accent);
-  font-size: clamp(15px, 1.3vw, 18px);
+  font-size: clamp(14px, 1.1vw, 16px);
   font-weight: 800;
   letter-spacing: .01em;
   text-decoration: none;
@@ -102,13 +122,13 @@ a, button { color: inherit; }
 
 .hero {
   width: min(850px, calc(100% - clamp(44px, 6.4vw, 68px)));
-  padding: clamp(24px, 3vw, 34px) 0 22px;
+  padding: clamp(20px, 2.5vw, 30px) 0 19px;
 }
 
 .eyebrow {
   margin: 0 0 14px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: .2em;
 }
@@ -118,7 +138,7 @@ h1 {
   width: fit-content;
   margin: 0;
   font-family: "Victor Mono", "SFMono-Regular", Menlo, monospace;
-  font-size: clamp(44px, 4.7vw, 64px);
+  font-size: clamp(40px, 4.1vw, 56px);
   font-weight: 700;
   line-height: .96;
   letter-spacing: -.065em;
@@ -138,8 +158,8 @@ h1::after {
   flex-wrap: wrap;
   align-items: center;
   gap: .35em .72em;
-  margin: 31px 0 26px;
-  font-size: clamp(15px, 1.25vw, 18px);
+  margin: 25px 0 22px;
+  font-size: clamp(14px, 1.1vw, 16px);
   font-weight: 700;
 }
 
@@ -164,11 +184,11 @@ footer button:hover, footer button:focus-visible {
 .quick-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px 28px;
-  margin: 0 0 34px 8px;
+  gap: 12px 24px;
+  margin: 0 0 28px 8px;
   padding-left: 25px;
   border-left: 3px solid rgba(36, 40, 45, .5);
-  font-size: clamp(15px, 1.2vw, 17px);
+  font-size: clamp(14px, 1vw, 15px);
 }
 
 .quick-links a, .quick-links button, .hint button, footer button {
@@ -179,8 +199,8 @@ footer button:hover, footer button:focus-visible {
 }
 
 blockquote {
-  margin: 0 0 31px;
-  font-size: clamp(16px, 1.35vw, 19px);
+  margin: 0 0 24px;
+  font-size: clamp(15px, 1.15vw, 17px);
   font-style: normal;
   font-weight: 400;
   line-height: 1.42;
@@ -190,8 +210,8 @@ blockquote {
 .hint {
   display: flex;
   gap: 16px;
-  margin: 0 0 30px 34px;
-  font-size: clamp(14px, 1.1vw, 16px);
+  margin: 0 0 26px 30px;
+  font-size: clamp(13px, .95vw, 14px);
   line-height: 1.5;
 }
 
@@ -200,14 +220,14 @@ blockquote {
 
 .updated {
   margin: 0;
-  font-size: clamp(14px, 1.05vw, 15px);
+  font-size: clamp(13px, .9vw, 14px);
 }
 
 .terminal {
   width: min(850px, calc(100% - clamp(44px, 6.4vw, 68px)));
   min-height: 110px;
-  padding: 12px 0 58px;
-  font-size: clamp(15px, 1.25vw, 18px);
+  padding: 8px 0 40px;
+  font-size: clamp(14px, 1.05vw, 16px);
   line-height: 1.38;
 }
 
@@ -272,10 +292,10 @@ footer {
   justify-content: space-between;
   gap: 20px;
   margin: auto clamp(22px, 3.2vw, 34px) 0;
-  padding: 18px 0 14px;
+  padding: 14px 0 10px;
   border-top: 1px dashed rgba(36, 40, 45, .35);
   color: var(--muted);
-  font-size: 12px;
+  font-size: 10.5px;
 }
 
 noscript { display: block; padding: 15px 30px; text-align: center; }
@@ -292,12 +312,18 @@ noscript { display: block; padding: 15px 30px; text-align: center; }
 
 @media (max-width: 759px) {
   body { padding: 0; }
-  .paper { min-height: 100vh; border-width: 0; border-radius: 0; }
+  .paper {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    border-width: 0;
+    border-radius: 0;
+  }
   .masthead { margin-inline: 22px; padding-top: 23px; }
   .hero, .terminal { width: auto; margin-inline: 22px; }
   .hero { padding-top: 29px; }
-  h1 { font-size: clamp(42px, 12.5vw, 65px); }
-  .identity { margin-top: 31px; }
+  h1 { font-size: clamp(38px, 11vw, 56px); }
+  .identity { margin-top: 25px; }
   .quick-links { gap: 11px 22px; }
   .hint { margin-left: 7px; }
   footer { margin-inline: 22px; flex-direction: column; gap: 6px; }

@@ -256,7 +256,7 @@
 
     if (completedValue === input.value && candidates.length > 1) {
       addLine(candidates.map(entryHtml).join('  '), 'suggestions');
-      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     } else {
       input.value = completedValue;
       input.setSelectionRange(input.value.length, input.value.length);
@@ -268,7 +268,7 @@
     run(input.value);
     input.value = '';
     input.focus();
-    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 
   input.addEventListener('keydown', (event) => {
